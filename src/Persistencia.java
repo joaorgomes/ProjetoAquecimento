@@ -32,48 +32,8 @@ public class Persistencia {
 			} catch (FileNotFoundException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
-			}
-			
-	
-
-			// return "Nao existe clientes com esse email cadastrado";
+			}			
 			return new CentralDeInformacoes();
-	}
-
-
-	/*private XStream xStream = new XStream(new DomDriver());
-	private File arquivo = new File("central.xml");
-
-	public void salvarCentral(CentralDeInformacoes central, String nomeArquivo) {
-		String xml = xStream.toXML(nomeArquivo);
-		try {
-			if (!arquivo.exists())
-				arquivo.createNewFile();
-			PrintWriter gravar = new PrintWriter(arquivo);
-			gravar.print(xml);
-			gravar.close();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
-	}
-
-	public CentralDeInformacoes recuperarCentral() {
-		//String xml = xStream.toXML(nomeDoArquivo);
-		try {
-			if (arquivo.exists()) {
-				FileInputStream fis = new FileInputStream(arquivo);
-				return (CentralDeInformacoes) xStream.fromXML(fis);
-			}
-		} catch (FileNotFoundException e) {
-
-			e.printStackTrace();
-		}
-
-		return new CentralDeInformacoes();
-
-	}
-}*/
+	}	
 }
 

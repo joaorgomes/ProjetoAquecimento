@@ -10,8 +10,7 @@ public abstract class ConversaoMonth {
 			return Month.FEBRUARY;
 		}
 		case "3":{
-			return Month.MARCH;
-			
+			return Month.MARCH;			
 		}
 		case "4": {			
 			return Month.APRIL;
@@ -20,8 +19,7 @@ public abstract class ConversaoMonth {
 			return Month.MAY;
 		}
 		case "6":{
-			return Month.JUNE;
-			
+			return Month.JUNE;			
 		}
 		case "7": {			
 			return Month.JULY;
@@ -30,8 +28,7 @@ public abstract class ConversaoMonth {
 			return Month.AUGUST;
 		}
 		case "9":{
-			return Month.SEPTEMBER;
-			
+			return Month.SEPTEMBER;			
 		}
 		case "10": {			
 			return Month.OCTOBER;

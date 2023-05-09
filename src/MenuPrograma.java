@@ -39,24 +39,22 @@ public class MenuPrograma {
 
 				Cliente cliente1 = new Cliente(nome, CPF, sexo, email);
 				if (ci.adicionarCliente(cliente1)) {
-					// pc.salvarCentral(ci,"Lista de Clientes");
-					// pc.salvarCentral(ci,"Lista de Clientes.xml");
+					
 					System.out.println("Cliente cadstrado com successo");
 				} else {
 					System.out.println("Erro, ja esxite um cliente com esses ");
 				}
+				
 			} else if (opcao == 2) {
-				// ci=pc.recuperarCentral("Lista de Clientes.xml");
-
 				for (Cliente clientes : ci.getTodossOsClientes()) {
 					System.out.println(clientes.getNome());
 				}
+				
 			} else if (opcao == 3) {
 				System.out.println("Digite o email do cliente");
-
-				String email = leitor.nextLine();
-				// ci=pc.recuperarCentral("Lista de Clientes.xml");
+				String email = leitor.nextLine();				
 				System.out.println(ci.recuperClientePorEmail(email));
+				
 			} else if (opcao == 4) {
 
 				System.out.println("Digite o nome do evento");
@@ -68,7 +66,7 @@ public class MenuPrograma {
 				LocalDateTime date = LocalDateTime
 						.parse(convertido[2] + "-" + convertido[1] + "-" + convertido[0] + "T00:00:01.485");
 
-				// LocalDateTime data =LocalDateTime.parse(leitor.nextLine());
+				
 
 				System.out.println("Digite o local do evento ");
 				String local = leitor.nextLine().toUpperCase();
@@ -77,25 +75,21 @@ public class MenuPrograma {
 				Cliente cliente = ci.recuperClientePorEmail(email);
 				Evento evento = new Evento(nomeEvento, date, local, cliente);
 
-				if (ci.adicionarEvento(evento)) {
-					// pc.salvarCentral(ci, "Lista de Clientes");
-					// pc.salvarCentral(ci, "Lista de Clientes.xml");
+				if (ci.adicionarEvento(evento)) {					
 					System.out.println("Evento adicionado");
 				} else {
 					System.out.println("Nao foi possivel adicionar o evento");
 				}
+				
 			} else if (opcao == 5) {
-
-				// ci=pc.recuperarCentral("Lista de Clientes.xml");
-
 				System.out.println("Segue lista de eventos:");
 				System.out.println();
 				for (Evento evento : ci.getTodosOsEventos()) {
 					System.out.println("- " + evento.getNomeEvento());
 				}
+				
 			} else if (opcao == 6) {
 				System.out.println("Digite o email do cliente");
-
 				String email = leitor.nextLine();
 				ArrayList<Evento> todosEventos = ci.recuperarEventosDeUmCliente(email);
 
@@ -122,6 +116,7 @@ public class MenuPrograma {
 				Month escolhaMes =ConversaoMonth.convertido(leitor.nextLine());		
 
 				GeradorDeRelatorios.obterRelatorioDoMes(escolhaMes, ci);
+				
 			} else if (opcao == 8) {
 				for (Evento eventos : ci.getTodosOsEventos()) {
 					if (!eventos.isFoiContratado())
@@ -143,7 +138,7 @@ public class MenuPrograma {
 				System.out.println("Programa finalizado!");
 				break paradaUniversal;
 			}
-			pc.salvarCentral(ci, "Lista de Clientes");
+			
 			pc.salvarCentral(ci, "Lista de Clientes.xml");
 		}
 
