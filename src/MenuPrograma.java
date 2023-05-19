@@ -52,7 +52,7 @@ public class MenuPrograma {
 				
 			} else if (opcao == 3) {
 				System.out.println("Digite o email do cliente");
-				String email = leitor.nextLine();				
+				String email = leitor.nextLine().toLowerCase();				
 				System.out.println(ci.recuperClientePorEmail(email));
 				
 			} else if (opcao == 4) {
@@ -99,16 +99,16 @@ public class MenuPrograma {
 
 			} else if (opcao == 7) {
 
-				System.out.println("Digite o mes que vc deseja exibr o relatorio\n"
-						+ "[1] JANEIRO\n"
-						+ "[2] FEVEREIRO\n"
-						+ "[3] MARÇO\n"
-						+ "[4] ABRIL\n"
-						+ "[5] MAIO\n"
-						+ "[6] JUNHO\n"
-						+ "[7] JULHO\n"
-						+ "[8] AGOSTO\n" 
-						+ "[9] SETEMBRO\n"
+				System.out.println("Digite o NUMERO do mes que vc deseja exibir o relatorio\n"
+						+ "[1]  JANEIRO\n"
+						+ "[2]  FEVEREIRO\n"
+						+ "[3]  MARÇO\n"
+						+ "[4]  ABRIL\n"
+						+ "[5]  MAIO\n"
+						+ "[6]  JUNHO\n"
+						+ "[7]  JULHO\n"
+						+ "[8]  AGOSTO\n" 
+						+ "[9]  SETEMBRO\n"
 						+ "[10] OUTUBRO\n"
 						+ "[11] NOMEMBRO\n"
 						+ "[12] DEZEMBRO\n");

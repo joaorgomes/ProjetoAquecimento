@@ -1,8 +1,8 @@
 import java.time.Month;
 
 public abstract class ConversaoMonth {
-	public static Month convertido(String n) {
-		switch (n) {
+	public static Month convertido(String escolha) {
+		switch (escolha) {
 		case "1": {			
 			return Month.JANUARY;
 		}
